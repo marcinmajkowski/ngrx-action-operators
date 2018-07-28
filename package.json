@@ -2,8 +2,10 @@
   "name": "ngrx-action-operators",
   "version": "0.0.1",
   "description": "RxJS operators for class-based ngrx actions",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,7 +32,7 @@
     "@ngrx/effects": "^4.1.1",
     "@ngrx/store": "^4.1.1",
     "rxjs": "^5.5.11",
-    "typescript": "^2.9.2",
+    "typescript": "2.3.2",
     "zone.js": "^0.8.4"
   },
   "dependencies": {}
