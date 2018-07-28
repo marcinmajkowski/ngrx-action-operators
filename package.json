@@ -1,0 +1,24 @@
+{
+  "name": "ngrx-action-operators",
+  "version": "0.0.1",
+  "description": "RxJS operators for class-based ngrx actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcinmajkowski/ngrx-action-operators.git"
+  },
+  "keywords": [
+    "angular",
+    "ngrx",
+    "typescript"
+  ],
+  "author": "Marcin Majkowski <pl.marcin.m@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcinmajkowski/ngrx-action-operators/issues"
+  },
+  "homepage": "https://github.com/marcinmajkowski/ngrx-action-operators#readme"
+}
