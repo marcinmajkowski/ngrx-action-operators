@@ -1,8 +1,7 @@
 import { Action } from '@ngrx/store';
 import { from } from 'rxjs/observable/from';
-import { ofAction } from '../src';
+import { ofAction } from './of-action';
 import { finalize } from 'rxjs/operators';
-import Spy = jasmine.Spy;
 
 class NoPayloadAction implements Action {
     readonly type = 'no payload action';
@@ -24,7 +23,7 @@ class BarAction implements Action {
 
 describe('ofAction', () => {
 
-    let spy: Spy;
+    let spy: jasmine.Spy;
 
     beforeEach(() => {
         spy = jasmine.createSpy('spy');
@@ -65,5 +64,18 @@ describe('ofAction', () => {
                 done();
             })
         ).subscribe(spy);
+    });
+
+    it('should allow to access payload', done => {
+        const action1 = new FooAction('foo');
+        const action2 = new NoPayloadAction();
+        let payload: string;
+        from([action1, action2]).pipe(
+            ofAction(FooAction, BarAction),
+            finalize(() => {
+                expect(payload).toBe('foo');
+                done();
+            })
+        ).subscribe(action => payload = action.payload);
     });
 });

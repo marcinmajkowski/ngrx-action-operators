@@ -7,8 +7,7 @@ module.exports = function (config) {
         },
         reporters: ['progress', 'karma-typescript'],
         files: [
-            'src/**/*.ts',
-            'spec/**/*.ts'
+            'src/**/*.ts'
         ],
         preprocessors: {
             '**/*.ts': 'karma-typescript'
